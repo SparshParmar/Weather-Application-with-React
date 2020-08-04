@@ -52,13 +52,13 @@ export interface WeatherError {
 }
 
 export interface WeatherState {
-  data: WeaatherData | null;
+  data: WeatherData | null;
   loading: boolean;
   error: string;
 }
 interface GetWeatherAction {
-  type: typeof GET_WEATEHER;
-  payload: WeaatherData;
+  type: typeof GET_WEATHER;
+  payload: WeatherData;
 }
 
 interface SetLoadingAction {
@@ -67,7 +67,7 @@ interface SetLoadingAction {
 
 interface SetErrorAction {
   type: typeof SET_ERROR;
-  paylaoad: string;
+  payload: string;
 }
 
 export type WeatherAction =
