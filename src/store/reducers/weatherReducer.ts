@@ -1,4 +1,10 @@
-import { WeatherState, GET_WEATEHER, SET_LOADING, SET_ERROR } from '../types';
+import {
+  WeatherState,
+  GET_WEATHER,
+  SET_LOADING,
+  SET_ERROR,
+  WeatherAction,
+} from '../types';
 
 const initialState: WeatherState = {
   data: null,
@@ -8,7 +14,7 @@ const initialState: WeatherState = {
 
 export default (state = initialState, action: WeatherAction): WeatherState => {
   switch (action.type) {
-    case GET_WEATEHER:
+    case GET_WEATHER:
       return {
         data: action.payload,
         loading: false,
